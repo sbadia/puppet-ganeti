@@ -1,0 +1,15 @@
+{
+  "name": "puppet-ganeti",
+  "version": "0.0.1",
+  "author": "Sebastien Badia",
+  "summary": "Puppet module to install and configure a Ganeti cluster",
+  "license": "Apache-2.0",
+  "source": "https://github.com/sbadia/puppet-ganeti.git",
+  "project_page": "https://github.com/sbadia/puppet-ganeti",
+  "issues_url": "https://github.com/sbadia/puppet-ganeti/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
