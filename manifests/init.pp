@@ -6,43 +6,39 @@
 # Parameters
 # ----------
 #
-# Document parameters here.
+# [*packages*]
+#   Packages for a ganeti cluster.
 #
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
+# [*packages_libs*]
+#   Libs packages for a ganeti cluster.
 #
-# Variables
-# ----------
-#
-# Here you should define a list of variables that this module would require.
-#
-# * `sample variable`
-#  Explanation of how this variable affects the function of this class and if
-#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#  External Node Classifier as a comma separated list of hostnames." (Note,
-#  global variables should be avoided in favor of class parameters as
-#  of Puppet 2.6.)
+# [*packages_tools*]
+#   Tools packages for a ganeti cluster.
 #
 # Examples
 # --------
 #
 # @example
-#    class { 'ganeti':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#    }
+#    class { 'ganeti': }
 #
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# Lorraine Data Network <contact@ldn-fai.net>
 #
 # Copyright
 # ---------
 #
-# Copyright 2016 Your name here, unless otherwise noted.
+# Copyright 2016 Lorraine Data Network, unless otherwise noted.
 #
-class ganeti {
+class ganeti (
+  $packages       = $ganeti::params::packages,
+  $packages_libs  = $ganeti::params::packages_libs,
+  $packages_tools = $ganeti::params::packages_tools,
+) inherits ganeti::params {
 
+  package { $packages: ensure => installed; }
+  package { $packages_libs: ensure => installed; }
+  package { $packages_tools: ensure => installed; }
 
 }
