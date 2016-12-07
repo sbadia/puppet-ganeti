@@ -1,7 +1,7 @@
 {
   "name": "puppet-ganeti",
   "version": "0.0.1",
-  "author": "Sebastien Badia",
+  "author": "Lorraine Data Network",
   "summary": "Puppet module to install and configure a Ganeti cluster",
   "license": "Apache-2.0",
   "source": "https://github.com/sbadia/puppet-ganeti.git",
